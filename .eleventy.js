@@ -1,8 +1,9 @@
 module.exports = function (eleventyConfig) {
-
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/stylesheets");
     eleventyConfig.addPassthroughCopy("src/assets/scripts");
+
+    eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
     
     return {
