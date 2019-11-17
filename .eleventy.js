@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
         pathPrefix: "/",
         htmlTemplateEngine: 'njk',
         markdownTemplateEngine: 'md',
-        templateFormats: ["html", "liquid", "njk"],
+        templateFormats: ["html", "liquid", "njk", "md"],
         dir: {
             data: "./_data",
             includes: "./_includes",
