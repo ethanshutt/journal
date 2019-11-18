@@ -3,12 +3,11 @@ eleventyExcludeFromCollections: true
 layout: home.njk
 title: Home
 ---
-<h1 class="text-center">An Eleventy Starter</h1>
-<p class="text-center">Journal is a lightweight starter kit using the static site generator <a href="https://11ty.io">Eleventy</a> and <a href="https://github.com/ethanshutt/notebook">Notebook CSS</a>.</p>
+<div class="text-center" id="hero">
+    <h1>An Eleventy Starter</h1>
+    <p>Journal is a lightweight starter kit using the static site generator <a href="https://11ty.io">Eleventy</a> and <a href="https://github.com/ethanshutt/notebook">Notebook CSS</a>.</p>
+    <a href="https://github.com/ethanshutt/journal">View Source Code on Github</a>
 <hr>
-<h2>Some Example Pages</h2>
-<ul>
-{%- for post in collections.all -%}
-  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-{%- endfor -%}
-</ul>
+</div>
+<h2>Here's a working collection object</h2>
+{% include "postslist.njk" %}
