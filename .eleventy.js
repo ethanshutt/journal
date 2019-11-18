@@ -17,12 +17,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
     eleventyConfig.addCollection("posts", function (collection) {
-        return collection.getAllSorted().filter(function (item) {
-            // Only return content that was originally a markdown file
-            // Need to filter better, this will get messy
-            let extension = item.inputPath.split('.').pop();
-            return extension === "md";
-        });
+            return collection.getFilteredByTag("posts");
     });
 
     
