@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/stylesheets");
     eleventyConfig.addPassthroughCopy("src/assets/scripts");
+    eleventyConfig.setDataDeepMerge(true);
 
     eleventyConfig.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("DDDD");
