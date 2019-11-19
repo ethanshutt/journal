@@ -1,7 +1,7 @@
 ---
-title: This is my Second post.
-description: Dallas Cowboys.
-date: 2019-11-07
+title: Look at my second post
+description: Hello World
+date: 2019-11-15
 tags: new-tag
 layout: post.njk
 ---

@@ -1,7 +1,7 @@
 ---
-title: This is my Third post.
-description: Detroit Lions.
-date: 2019-11-07
+title: Check out my first post
+description: This is a new post made by me.
+date: 2019-11-18
 tags: new-tag
 layout: post.njk
 ---
