@@ -74,7 +74,7 @@ table {
   --font-primary: sans-serif;
   --font-secondary: serif;
   --font-monospace: monospace;
-  --font-color: #cbeeeb;
+  --font-color: #343434;
 
   /* Layout */
   --container-mobile: 480px;
@@ -88,7 +88,7 @@ table {
   --spacing-lg: 2em;
 
   /* Colors */
-  --background: #1f2928;
+  --background: #fff;
   --primary: #1fd3ac;
   --secondary: #0250bc;
   --accent: #eebe3b;
