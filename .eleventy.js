@@ -14,10 +14,21 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
     });
 
+    const site = require('./src/_data/site.json');
 
-    eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
-    eleventyConfig.addCollection("posts", function (collection) {
-            return collection.getFilteredByTag("posts");
+
+    const now = new Date();
+    const livePosts = post => post.date <= now && !post.data.draft;
+    eleventyConfig.addCollection('posts', collection => {
+        return [
+            ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
+        ].reverse();
+    });
+
+    eleventyConfig.addCollection('postFeed', collection => {
+        return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
+            .reverse()
+            .slice(0, site.maxPostsPerPage);
     });
 
     

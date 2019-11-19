@@ -1,7 +1,7 @@
 ---
 title: Wow, a third post
 description: Detroit Lions.
-date: 2019-11-09
+date: 2019-11-13
 tags: new-tag
 layout: post.njk
 ---

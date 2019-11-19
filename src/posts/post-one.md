@@ -1,7 +1,7 @@
 ---
 title: Check out my first post
 description: This is a new post made by me.
-date: 2019-11-18
+date: 2019-11-01
 tags: new-tag
 layout: post.njk
 ---
