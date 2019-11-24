@@ -3,25 +3,16 @@ title: post
 ---
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-        <title>Journal Starter - {{ title }}</title>
-
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="{{ '/assets/stylesheets/main.css' | url }}">
-
-        <link rel="icon" href="{{ '/images/favicon.png' | url }}">
-
-    </head>
+    {% include "head.njk" %}
     <body>
         <main class="container">
         <h1 class="no-margin-bottom">{{ title }}</h1>
         <time class="postlist-date no-margin-top" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        
         {{ content | safe }}
+        
         {% include "footer.njk" %}
+        
         </main>
         <!-- Main JS -->
         <script src="{{ 'assets/scripts/main.js' | url }}"></script>
