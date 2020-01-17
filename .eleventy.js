@@ -13,7 +13,6 @@ module.exports = function (eleventyConfig) {
 
     const site = require('./src/_data/site.json');
 
-
     const now = new Date();
     const livePosts = post => post.date <= now && !post.data.draft;
     eleventyConfig.addCollection('posts', collection => {
