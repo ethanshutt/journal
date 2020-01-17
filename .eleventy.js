@@ -1,9 +1,6 @@
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("src/assets/images");
-    eleventyConfig.addPassthroughCopy("src/assets/stylesheets");
-    eleventyConfig.addPassthroughCopy("src/assets/scripts");
     eleventyConfig.setDataDeepMerge(true);
 
     eleventyConfig.addFilter("readableDate", dateObj => {
